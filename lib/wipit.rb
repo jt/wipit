@@ -24,9 +24,12 @@ module Wipit
   end
 
   def build(options={})
+    deleted_files = %x[ git ls-files --deleted ]
     @command = ''
     @command << "git checkout -b #{options[:branch]} && " unless options[:branch].empty?
-    @command << "git add . && git rm $(git ls-files --deleted) && git commit -m 'WIP'"
+    @command << "git add ."
+    @command << " && git rm $(git ls-files --deleted)" unless deleted_files.empty?
+    @command << " && git commit -m 'WIP'"
     @command << " && git push origin #{options[:branch]}" unless options[:branch].empty? || options[:push] != true
     @command
   end
