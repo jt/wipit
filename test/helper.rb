@@ -1,6 +1,5 @@
 $LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
 require 'test/unit'
-require 'util_capture'
 require 'wipit'
 
 class Test::Unit::TestCase
