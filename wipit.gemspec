@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['John Thomas Marino']
   s.email       = 'writejm@gmail.com'
-  s.homepage    = 'http://github.com/johmas/wipit'
+  s.homepage    = 'http://github.com/johnnytommy/wipit'
   s.summary     = %q{
     wipit is a command line utility for git that makes it easier to save work in progress.
   }
